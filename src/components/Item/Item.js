@@ -2,6 +2,7 @@ import React from 'react';
 import './Item.css'
 
 const Item = (props) => {
+    const { handleClick, item } = props;
     const { name, timeRe, img, age } = props.item;
     return (
         <div className='item'>
@@ -11,7 +12,7 @@ const Item = (props) => {
                 <p>Time: {timeRe}s</p>
                 <p>Expected Age: {age}</p>
             </div>
-            <button className='list-add'>Add To List</button>
+            <button onClick={() => handleClick(item)} className='list-add'>Add To List</button>
         </div>
     );
 };

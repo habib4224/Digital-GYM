@@ -1,8 +1,27 @@
-import React from 'react';
-import Exercise from '../Exercise/Exercise';
+import React, { useState } from 'react';
 import './Profile.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-const Profile = () => {
+const Profile = (props) => {
+
+    const [offtime, setOfftime] = useState([]);
+    const { acti } = props;
+
+    const breakClick = (t) => {
+
+        console.log(t.target.innerText);
+        const newSetC = [t.target.innerText];
+        setOfftime(newSetC);
+    }
+    let total = 0;
+    for (const role of acti) {
+        total = total + role.timeRe;
+    }
+
+    const toastify = () => {
+        toast("Wow Congratulation !", { position: "top-center" });
+    }
     return (
         <div>
             <div className='profile-pic'>
@@ -32,14 +51,28 @@ const Profile = () => {
             <div className="break">
                 <h4>Add a Break</h4>
                 <div className="break-time">
-                    <button className='seconds'>20s</button>
-                    <button className='seconds'>30s</button>
-                    <button className='seconds'>40s</button>
-                    <button className='seconds'>50s</button>
+                    <button onClick={(t) => breakClick(t)} className='seconds'><span>10</span>s</button>
+                    <button onClick={(t) => breakClick(t)} className='seconds'><span>20</span>s</button>
+                    <button onClick={(t) => breakClick(t)} className='seconds'><span>30</span>s</button>
+                    <button onClick={(t) => breakClick(t)} className='seconds'><span>40</span>s</button>
+
 
                 </div>
             </div>
-            <Exercise></Exercise>
+            <div style={{ paddingBottom: 40 }}>
+
+                <h4>Exercise Details</h4>
+                <div className='exercise-break-time'>
+                    <h5>Exercise Time:</h5>
+                    <p>{total} Seconds</p>
+                </div>
+                <div className='exercise-break-time'>
+                    <h5>Break Time:</h5>
+                    <p>{offtime} Seconds</p>
+                </div>
+                <button onClick={toastify} className='button-task'>Task Complete</button>
+                <ToastContainer />
+            </div>
         </div>
     );
 };

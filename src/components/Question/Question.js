@@ -10,8 +10,9 @@ const Question = () => {
                 <h4>Answer: React uses a declarative paradigm that makes it easier to reason about your application and aims to be both efficient and flexible. It designs simple views for each state in your application, and React will efficiently update and render just the right component when your data changes.</h4>
             </div>
             <div className='qustion-one'>
-                <h1>Question: Difference between props and state.</h1>
-                <h4>Answer: Props are used to pass data from one component to another. The state is a local data storage that is local to the component only and cannot be passed to other components.</h4>
+                <h1 >Question: Difference between props and state.</h1>
+                <h4>Answer: By using this Hook, you tell React that your component needs to do something after render. React will remember the function you passed well refer to it as our effect, and call it later after performing the DOM updates. In this effect, we set the document title, but we could also perform data fetching or call some other imperative API.
+                </h4>
             </div>
             <div className='qustion-one'>
                 <h1>Question: UseEffect's work except data loading.</h1>

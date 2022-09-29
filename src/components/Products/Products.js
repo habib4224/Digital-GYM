@@ -5,11 +5,18 @@ import './Products.css'
 
 const Products = () => {
     const [items, setItems] = useState([]);
+    const [acti, setActi] = useState([]);
+
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
             .then(data => setItems(data))
     }, [])
+
+    const handleClick = (item) => {
+        const newActi = [...acti, item];
+        setActi(newActi);
+    }
 
     return (
         <div className='mainPage'>
@@ -21,11 +28,12 @@ const Products = () => {
                     {
                         items.map(item => <Item
                             key={item.id}
-                            item={item}></Item>)
+                            item={item}
+                            handleClick={handleClick}></Item>)
                     }
                 </div>
             </div>
-            <Profile></Profile>
+            <Profile acti={acti}></Profile>
         </div>
     );
 };
