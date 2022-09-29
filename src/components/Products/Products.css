@@ -1,0 +1,15 @@
+.header {
+    color: rgb(27, 11, 117);
+    margin-left: 2rem;
+}
+
+.your-item {
+    margin-left: 2rem;
+
+}
+
+.items-part {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 10px;
+}
