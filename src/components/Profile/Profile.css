@@ -25,11 +25,13 @@
     display: flex;
     background-color: rgb(180, 196, 250);
     border-radius: 20px;
-    padding: 0 10px;
+    padding: 10px;
+
 }
 
 .seconds {
-    background-color: rgb(97, 110, 223);
+    background-color: rgb(255, 255, 255);
     border-radius: 20px;
     padding: 10px;
+    border: none;
 }

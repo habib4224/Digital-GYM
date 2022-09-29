@@ -32,10 +32,11 @@ const Profile = () => {
             <div className="break">
                 <h4>Add a Break</h4>
                 <div className="break-time">
-                    <p className='seconds'>20s</p>
-                    <p className='seconds'>30s</p>
-                    <p className='seconds'>40s</p>
-                    <p className='seconds'>50s</p>
+                    <button className='seconds'>20s</button>
+                    <button className='seconds'>30s</button>
+                    <button className='seconds'>40s</button>
+                    <button className='seconds'>50s</button>
+
                 </div>
             </div>
             <Exercise></Exercise>

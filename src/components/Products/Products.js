@@ -10,6 +10,7 @@ const Products = () => {
             .then(res => res.json())
             .then(data => setItems(data))
     }, [])
+
     return (
         <div className='mainPage'>
             <div>

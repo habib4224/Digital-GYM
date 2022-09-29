@@ -6,7 +6,6 @@ const First = () => {
     return (
         <div >
             <Products></Products>
-            {/* <Profile></Profile> */}
         </div>
     );
 };
