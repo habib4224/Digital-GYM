@@ -1,13 +1,13 @@
 
 import './App.css';
-import First from './components/FirstPage/First';
+import Products from './components/Products/Products';
 import Question from './components/Question/Question';
 
 function App() {
 
   return (
     <div >
-      <First></First>
+      <Products></Products>
       <Question></Question>
     </div>
   );
