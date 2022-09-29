@@ -3,42 +3,42 @@
         "id": 1,
         "name": "Bicep Workouts",
         "age": "21-25",
-        "time": "25",
+        "timeRe": "25",
         "img": "https://cdn.muscleandstrength.com/sites/default/files/field/feature-image/workout/30-day-arm-workout.jpg"
     },
     {
         "id": 2,
         "name": "Back Workouts",
         "age": "21-25",
-        "time": "20",
+        "timeRe": "20",
         "img": "https://cdn.muscleandstrength.com/sites/default/files/field/feature-image/workout/v-taper-workout-thumb_0.jpg"
     },
     {
         "id": 3,
         "name": "Glute Workouts",
         "age": "21-25",
-        "time": "15",
+        "timeRe": "15",
         "img": "https://cdn.muscleandstrength.com/sites/default/files/field/feature-image/workout/dumbbell-lunge.jpg"
     },
     {
         "id": 4,
         "name": "Chest Workouts",
         "age": "21-25",
-        "time": "16",
+        "timeRe": "16",
         "img": "https://cdn.muscleandstrength.com/sites/default/files/field/feature-image/workout/10mass_feature.jpg"
     },
     {
         "id": 5,
         "name": "Home Workouts",
         "age": "21-25",
-        "time": "30",
+        "timeRe": "30",
         "img": "https://cdn.muscleandstrength.com/sites/default/files/styles/800x500/public/shirtless_male_doing_ab_workout_at_home.jpg?itok=Glbg5vTr"
     },
     {
         "id": 6,
         "name": "Bodyweight Workouts",
         "age": "21-25",
-        "time": "26",
+        "timeRe": "26",
         "img": "https://cdn.muscleandstrength.com/sites/default/files/field/feature-image/workout/man-bodyweight-decline-pushup.jpg"
     }
 ]

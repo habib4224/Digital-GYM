@@ -1,4 +1,5 @@
 import React from 'react';
+import Exercise from '../Exercise/Exercise';
 import './Profile.css'
 
 const Profile = () => {
@@ -37,6 +38,7 @@ const Profile = () => {
                     <p className='seconds'>50s</p>
                 </div>
             </div>
+            <Exercise></Exercise>
         </div>
     );
 };
