@@ -13,27 +13,28 @@ const Products = () => {
             .then(data => setItems(data))
     }, [])
 
-    const handleClick = (item) => {
+    const clickHandle = (item) => {
         const newActi = [...acti, item];
         setActi(newActi);
     }
 
     return (
         <div className='mainPage'>
-            <div>
+            <div >
 
                 <h1 className='header'>Digital-GYM</h1>
                 <h3 className='your-item'>Select Your Excersize Items</h3>
-                <div className='items-part'>
+                <div className='cart-container'>
                     {
                         items.map(item => <Item
                             key={item.id}
                             item={item}
-                            handleClick={handleClick}></Item>)
+                            clickHandle={clickHandle}></Item>)
                     }
                 </div>
-            </div>
-            <Profile acti={acti}></Profile>
+            </div >
+            <div > <Profile acti={acti}></Profile></div>
+
         </div>
     );
 };
