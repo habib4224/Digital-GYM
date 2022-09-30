@@ -7,7 +7,7 @@ import { addtodb } from '../local-storage/Local';
 const Profile = (props) => {
 
     const [offtime, setOfftime] = useState([]);
-    const { acti } = props;
+    const { active } = props;
 
     const breakClick = (t) => {
         // localStorage.setItem(t.target.innerText, 1)
@@ -17,7 +17,7 @@ const Profile = (props) => {
         setOfftime(newSetC);
     }
     let total = 0;
-    for (const role of acti) {
+    for (const role of active) {
         total = total + role.timeRe;
     }
 
