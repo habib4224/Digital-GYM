@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Profile.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { addtodb } from '../local-storage/Local';
 
 const Profile = (props) => {
 
@@ -9,8 +10,9 @@ const Profile = (props) => {
     const { acti } = props;
 
     const breakClick = (t) => {
-
-        console.log(t.target.innerText);
+        // localStorage.setItem(t.target.innerText, 1)
+        addtodb(t);
+        // console.log(t.target.innerText);
         const newSetC = [t.target.innerText];
         setOfftime(newSetC);
     }

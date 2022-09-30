@@ -5,7 +5,7 @@ import './Products.css'
 
 const Products = () => {
     const [items, setItems] = useState([]);
-    const [acti, setActi] = useState([]);
+    const [active, setactive] = useState([]);
 
     useEffect(() => {
         fetch('data.json')
@@ -14,16 +14,16 @@ const Products = () => {
     }, [])
 
     const clickHandle = (item) => {
-        const newActi = [...acti, item];
-        setActi(newActi);
+        const newActive = [...active, item];
+        setactive(newActive);
     }
 
     return (
-        <div className='mainPage'>
-            <div >
+        <div >
+            <h1 className='header'>Digital-GYM</h1>
+            <h3 className='your-item'>Select Your Excersize Items</h3>
+            <div className='mainPage'>
 
-                <h1 className='header'>Digital-GYM</h1>
-                <h3 className='your-item'>Select Your Excersize Items</h3>
                 <div className='cart-container'>
                     {
                         items.map(item => <Item
@@ -32,8 +32,9 @@ const Products = () => {
                             clickHandle={clickHandle}></Item>)
                     }
                 </div>
+                <div > <Profile active={active}></Profile></div>
             </div >
-            <div > <Profile acti={acti}></Profile></div>
+
 
         </div>
     );
